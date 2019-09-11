@@ -1,0 +1,290 @@
+.PromotionR {
+  text-align: left;
+  margin: 10px 0px 10px 25px;
+}
+.fixTop{
+  position: fixed;
+  margin: 0 auto;
+  width: 97%;
+  top:0px;
+  z-index: 99;
+}
+.center {
+  margin-left: -40px;
+  padding: 40px 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.flxsRig {
+  width: 69%;
+  float: right;
+  margin: -25px 0px 0px 0px;
+  line-height: 8px;
+  font-size: small;
+  text-align: left;
+}
+.flxsFelt {
+  width: 28%;
+  height: 50px;
+  float: left;
+  margin: -25px 0px 0px 0px;
+  position: absolute;
+  left: 40px;
+}
+.imgSize {
+  margin: 13px -25px;
+  position: absolute;
+  color: #989494;
+  font-size: 16px;
+}
+.color {
+  font-size: 10px;
+  color: #989494;
+}
+
+.sizeNull{
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.background {
+  height: 38px;
+  background: url(./../assets/0.jpg) no-repeat center 0;
+  background-size: 60px 13px;
+  position: relative;
+}
+.background2 {
+  height: 38px;
+  width: 130px;
+  background: url(./../assets/1.jpg) no-repeat center 0;
+  background-size: 60px 13px;
+  position: relative;
+  left: -35px;
+}
+.ClorSize {
+  position: relative;
+  top: -47px;
+  left: 70px;
+  color: #989494;
+}
+
+// 刷新样式
+.pull-load {
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.pull-load-head {
+  position: absolute;
+  transform: translate3d(0px, -100%, 0px);
+  width: 100%;
+}
+.state-refreshing .pull-load-head,
+.state-refreshed .pull-load-head {
+  position: relative;
+  transform: none;
+}
+.pull-load-body {
+  position: relative;
+}
+.state-refreshing .pull-load-body {
+  transition: transform 0.2s;
+}
+.state-reset .pull-load-body {
+  transition: transform 0.2s;
+}
+/*
+ * HeadNode default UI
+ */
+.pull-load-head-default {
+  text-align: center;
+  font-size: 12px;
+  line-height: 3rem;
+  color: #7676a1;
+}
+.state-pulling .pull-load-head-default:after {
+  content: "下拉刷新";
+}
+.state-pulling.enough .pull-load-head-default:after {
+  content: "松开刷新";
+}
+.state-refreshing .pull-load-head-default:after {
+  content: "正在刷新...";
+}
+.state-refreshed .pull-load-head-default:after {
+  content: "刷新成功";
+}
+.state-pulling .pull-load-head-default {
+  opacity: 1;
+}
+.state-pulling .pull-load-head-default i {
+  display: inline-block;
+  font-size: 2em;
+  margin-right: 0.6em;
+  vertical-align: middle;
+  height: 1em;
+  border-left: 1px solid;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.state-pulling .pull-load-head-default i:before,
+.state-pulling .pull-load-head-default i:after {
+  content: "";
+  position: absolute;
+  font-size: 0.5em;
+  width: 1em;
+  bottom: 0px;
+  border-top: 1px solid;
+}
+.state-pulling .pull-load-head-default i:before {
+  right: 1px;
+  transform: rotate(50deg);
+  transform-origin: right;
+}
+.state-pulling .pull-load-head-default i:after {
+  left: 0px;
+  transform: rotate(-50deg);
+  transform-origin: left;
+}
+.state-pulling.enough .pull-load-head-default i {
+  transform: rotate(180deg);
+}
+.state-refreshing .pull-load-head-default i {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #9494b6;
+  border-top-color: #fff;
+  border-radius: 100%;
+  animation: circle 0.8s infinite linear;
+}
+.state-refreshed .pull-load-head-default {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.state-refreshed .pull-load-head-default i {
+  display: inline-block;
+  box-sizing: content-box;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 20px;
+  height: 1em;
+  width: 1em;
+  border: 1px solid;
+  border-radius: 100%;
+  position: relative;
+}
+.state-refreshed .pull-load-head-default i:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  height: 11px;
+  width: 5px;
+  border: solid;
+  border-width: 0 1px 1px 0;
+  transform: rotate(40deg);
+}
+.pull-load-footer-default {
+  text-align: center;
+  font-size: 12px;
+  line-height: 3rem;
+  color: #7676a1;
+}
+.state-loading .pull-load-footer-default:after {
+  content: "加载更多";
+}
+.pull-load-footer-default.nomore:after {
+  content: "没有更多";
+}
+.state-loading .pull-load-footer-default i {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #9494b6;
+  border-top-color: #fff;
+  border-radius: 100%;
+  animation: circle 0.8s infinite linear;
+}
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.viewport {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 10px 0;
+   height: 150px;
+   border-bottom: 1px solid #ccc;
+  -webkit-transform: translateZ(0);
+
+  :global {
+    .card-swipe {
+			width: 2345px;
+			height:150px;
+			padding-left: 0px;
+
+      .card-item {
+				width: 100px;
+				height: 170px;
+				margin: 0 10px;
+				text-align: center;
+				float: left;
+				color: #666;
+        box-sizing: border-box; 
+        background: #fff;
+        font-size: 12px;
+      }
+		}
+		.card-swipe::after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+		}
+  }
+}
+
+.flipsnap {
+  width: 1045px;
+  /* 230px(item) * 5 + 45px(padding) */
+  padding-left: 45px;
+}
+
+.item {
+  width: 200px; /*可以计算或者传过去*/
+  height: 170px;
+  margin: 0 10px; /*控制卡片的间距*/
+  text-align: center;
+  padding: 50px 0;
+  background: #efefef;
+  border: 5px solid #999;
+  float: left;
+  color: #666;
+  box-sizing: border-box;
+}
