@@ -11,7 +11,7 @@
     "babel-plugin-import": "^1.12.1",
     "dva": "^2.4.1",
     "mobile-pull-to-refresh": "^0.2.2",
-    "qs": "^6.8.0",
+    "qs": "^6.8.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-swipes": "^1.1.0"
